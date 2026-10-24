@@ -1290,10 +1290,10 @@
 
     .security-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 991px) {
       .security-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -2207,25 +2207,66 @@
         </div>
       </div>
 
-      <!-- Additional 4 Security Pillars Grid -->
-      <div class="security-grid">
+      <!-- Featured No Mint Card (Matching Size to LP Locked & Contract Verified) -->
+      <div class="art-deco-card featured-lp-card reveal">
+        <span class="art-deco-corner corner-tl"></span>
+        <span class="art-deco-corner corner-tr"></span>
+        <span class="art-deco-corner corner-bl"></span>
+        <span class="art-deco-corner corner-br"></span>
 
-        <!-- Card 2: No Mint -->
-        <div class="art-deco-card security-card reveal">
-          <div>
-            <div class="security-top">
-              <span class="security-icon">🛡️</span>
-              <span class="security-status">Fixed Supply</span>
-            </div>
-            <h3 class="security-name gold-gradient-text">No Mint</h3>
-            <p class="security-desc">
-              There is no minting function in the code. The 50 Trillion total supply can never be inflated or diluted.
-            </p>
+        <div class="featured-lp-layout">
+          <!-- Card Artwork: Warrior King with Sword Guarding Coin Vault -->
+          <div class="featured-lp-image-wrap">
+            <img src="assets/no-mint.png" alt="METANOIA No Mint — Warrior King Guarding Coin Vault" class="featured-lp-img" id="featured-nomint-img" loading="lazy">
           </div>
-          <a href="#" id="proof-nomint" target="_blank" rel="noopener noreferrer" class="proof-link">
-            <span>View proof</span> &rarr;
-          </a>
+
+          <!-- Card Content & Details -->
+          <div class="featured-lp-details">
+            <div class="featured-lp-badge-row">
+              <span class="section-tag" style="margin-bottom: 0;">✦ Incorruptible Supply ✦</span>
+              <span class="security-status" style="font-size: 0.75rem; padding: 4px 12px;">Zero Inflation</span>
+            </div>
+
+            <div>
+              <h3 class="featured-lp-title gold-gradient-text">No Mint</h3>
+              <p class="featured-lp-subtitle">No mint function. Supply is fixed at 50 trillion.</p>
+            </div>
+
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.65;">
+              The minting press has been permanently shattered. There is absolutely no mint function or supply alteration routine encoded within the smart contract. The total maximum supply of 50 Trillion $METANOIA is mathematically hard-capped forever, protecting your stake from devaluation or inflation.
+            </p>
+
+            <!-- Metadata Box -->
+            <div class="featured-lp-expiry-box">
+              <div>
+                <span class="featured-lp-expiry-label">Total Hard-Cap</span>
+                <div class="featured-lp-expiry-val">50,000,000,000,000 $METANOIA</div>
+              </div>
+              <div>
+                <span class="featured-lp-expiry-label">Mint Functionality</span>
+                <div class="featured-lp-expiry-val cyan-text">Disabled / Non-Existent</div>
+              </div>
+              <div>
+                <span class="featured-lp-expiry-label">Inflation Rate</span>
+                <div class="featured-lp-expiry-val" style="color: #4ade80;">0.00% (Strictly Fixed)</div>
+              </div>
+            </div>
+
+            <!-- View Contract Button -->
+            <div class="featured-lp-actions">
+              <a href="#" id="featured-nomint-proof-btn" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="padding: 13px 28px;">
+                <span>View Contract</span> &rarr;
+              </a>
+              <span style="font-size: 0.78rem; color: var(--text-muted);">
+                Inspect "Write Contract" methods on BSCScan
+              </span>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Additional 3 Security Pillars Grid -->
+      <div class="security-grid">
 
         <!-- Card 3: No Honeypot -->
         <div class="art-deco-card security-card reveal">
@@ -2511,7 +2552,7 @@
       proofs: {
         lpLocked: "https://www.team.finance/view-coin/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d",
         contractVerified: "https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d#code",
-        noMint: "https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d#readContract",
+        noMint: "https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d#writeContract",
         noHoneypot: "https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d",
         multiSig: "https://bscscan.com/address/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d",
         ownershipRenounced: "https://bscscan.com/tx/0x0000000000000000000000000000000000000000000000000000000000000000"
@@ -2522,7 +2563,8 @@
         hero: "assets/hero.png",
         logo: "assets/logo.png",
         lpLocked: "assets/lp-locked.png",
-        contractVerified: "assets/contract-verified.png"
+        contractVerified: "assets/contract-verified.png",
+        noMint: "assets/no-mint.png"
       }
     };
 
@@ -2584,8 +2626,14 @@
       const featuredContractProofBtn = document.getElementById("featured-contract-proof-btn");
       if (featuredContractProofBtn) featuredContractProofBtn.href = CONFIG.proofs.contractVerified;
 
-      const proofNoMint = document.getElementById("proof-nomint");
-      if (proofNoMint) proofNoMint.href = CONFIG.proofs.noMint;
+      // Update Featured No Mint Card Details
+      const featuredNoMintImg = document.getElementById("featured-nomint-img");
+      if (featuredNoMintImg && CONFIG.images && CONFIG.images.noMint) {
+        featuredNoMintImg.src = CONFIG.images.noMint;
+      }
+
+      const featuredNoMintProofBtn = document.getElementById("featured-nomint-proof-btn");
+      if (featuredNoMintProofBtn) featuredNoMintProofBtn.href = CONFIG.proofs.noMint;
 
       const proofHoneypot = document.getElementById("proof-honeypot");
       if (proofHoneypot) proofHoneypot.href = CONFIG.proofs.noHoneypot;
