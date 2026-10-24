@@ -1290,15 +1290,10 @@
 
     .security-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
     }
-    @media (max-width: 991px) {
-      .security-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       .security-grid {
         grid-template-columns: 1fr;
       }
@@ -2265,25 +2260,66 @@
         </div>
       </div>
 
-      <!-- Additional 3 Security Pillars Grid -->
-      <div class="security-grid">
+      <!-- Featured No Honeypot Card (Matching Size to LP Locked, Contract Verified, & No Mint) -->
+      <div class="art-deco-card featured-lp-card reveal">
+        <span class="art-deco-corner corner-tl"></span>
+        <span class="art-deco-corner corner-tr"></span>
+        <span class="art-deco-corner corner-bl"></span>
+        <span class="art-deco-corner corner-br"></span>
 
-        <!-- Card 3: No Honeypot -->
-        <div class="art-deco-card security-card reveal">
-          <div>
-            <div class="security-top">
-              <span class="security-icon">⚡</span>
-              <span class="security-status">0% / 0% Tax</span>
-            </div>
-            <h3 class="security-name gold-gradient-text">No Honeypot</h3>
-            <p class="security-desc">
-              Unrestricted transferability. Clean standard BEP-20 logic with zero tax manipulation and no blacklists.
-            </p>
+        <div class="featured-lp-layout">
+          <!-- Card Artwork: Royal Consort with Golden Honey Pot and Broken Trap -->
+          <div class="featured-lp-image-wrap">
+            <img src="assets/no-honeypot.png" alt="METANOIA No Honeypot — Royal Consort Guarding Golden Honey Pot" class="featured-lp-img" id="featured-nohoneypot-img" loading="lazy">
           </div>
-          <a href="#" id="proof-honeypot" target="_blank" rel="noopener noreferrer" class="proof-link">
-            <span>View proof</span> &rarr;
-          </a>
+
+          <!-- Card Content & Details -->
+          <div class="featured-lp-details">
+            <div class="featured-lp-badge-row">
+              <span class="section-tag" style="margin-bottom: 0;">✦ Zero Trading Restrictions ✦</span>
+              <span class="security-status" style="font-size: 0.75rem; padding: 4px 12px;">Honeypot Tested</span>
+            </div>
+
+            <div>
+              <h3 class="featured-lp-title gold-gradient-text">No Honeypot</h3>
+              <p class="featured-lp-subtitle">Tested: buy and sell freely. No honeypot mechanics.</p>
+            </div>
+
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.65;">
+              Every holder retains absolute sovereignty over their tokens. The smart contract contains no hidden sell restrictions, no honeypot traps, no malicious transfer cool-downs, and no balance blacklists. Sell functions are completely unrestricted with 0% tax.
+            </p>
+
+            <!-- Verification Metadata Box -->
+            <div class="featured-lp-expiry-box">
+              <div>
+                <span class="featured-lp-expiry-label">Buy &amp; Sell Tax</span>
+                <div class="featured-lp-expiry-val">0% Buy / 0% Sell</div>
+              </div>
+              <div>
+                <span class="featured-lp-expiry-label">Sell Restrictions</span>
+                <div class="featured-lp-expiry-val cyan-text">None / Unrestricted</div>
+              </div>
+              <div>
+                <span class="featured-lp-expiry-label">Simulation Status</span>
+                <div class="featured-lp-expiry-val" style="color: #4ade80;">100% Passed (Clean)</div>
+              </div>
+            </div>
+
+            <!-- Run Honeypot Check Button -->
+            <div class="featured-lp-actions">
+              <a href="#" id="featured-nohoneypot-proof-btn" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="padding: 13px 28px;">
+                <span>Run Honeypot Check</span> &rarr;
+              </a>
+              <span style="font-size: 0.78rem; color: var(--text-muted);">
+                Verify simulated buy &amp; sell transactions on Honeypot.is
+              </span>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Additional Security Pillars Grid -->
+      <div class="security-grid">
 
         <!-- Card 4: Multi-sig Treasury -->
         <div class="art-deco-card security-card reveal">
@@ -2553,7 +2589,7 @@
         lpLocked: "https://www.team.finance/view-coin/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d",
         contractVerified: "https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d#code",
         noMint: "https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d#writeContract",
-        noHoneypot: "https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d",
+        noHoneypot: "https://honeypot.is/bsc?address=0xA4555A9f6bEf7F42FB341504722163a2ee180F0d",
         multiSig: "https://bscscan.com/address/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d",
         ownershipRenounced: "https://bscscan.com/tx/0x0000000000000000000000000000000000000000000000000000000000000000"
       },
@@ -2564,7 +2600,8 @@
         logo: "assets/logo.png",
         lpLocked: "assets/lp-locked.png",
         contractVerified: "assets/contract-verified.png",
-        noMint: "assets/no-mint.png"
+        noMint: "assets/no-mint.png",
+        noHoneypot: "assets/no-honeypot.png"
       }
     };
 
@@ -2634,6 +2671,15 @@
 
       const featuredNoMintProofBtn = document.getElementById("featured-nomint-proof-btn");
       if (featuredNoMintProofBtn) featuredNoMintProofBtn.href = CONFIG.proofs.noMint;
+
+      // Update Featured No Honeypot Card Details
+      const featuredNoHoneypotImg = document.getElementById("featured-nohoneypot-img");
+      if (featuredNoHoneypotImg && CONFIG.images && CONFIG.images.noHoneypot) {
+        featuredNoHoneypotImg.src = CONFIG.images.noHoneypot;
+      }
+
+      const featuredNoHoneypotProofBtn = document.getElementById("featured-nohoneypot-proof-btn");
+      if (featuredNoHoneypotProofBtn) featuredNoHoneypotProofBtn.href = CONFIG.proofs.noHoneypot;
 
       const proofHoneypot = document.getElementById("proof-honeypot");
       if (proofHoneypot) proofHoneypot.href = CONFIG.proofs.noHoneypot;

@@ -96,12 +96,13 @@ const CONFIG = {
     logo: "assets/logo.png",
     lpLocked: "assets/lp-locked.png",
     contractVerified: "assets/contract-verified.png",
-    noMint: "assets/no-mint.png"
+    noMint: "assets/no-mint.png",
+    noHoneypot: "assets/no-honeypot.png"
   }
 };
 ```
 
-Simply replace `assets/hero.png`, `assets/logo.png`, `assets/lp-locked.png`, `assets/contract-verified.png`, or `assets/no-mint.png` with your preferred image files whenever you are ready.
+Simply replace `assets/hero.png`, `assets/logo.png`, `assets/lp-locked.png`, `assets/contract-verified.png`, `assets/no-mint.png`, or `assets/no-honeypot.png` with your preferred image files whenever you are ready.
 
 
 
