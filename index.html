@@ -709,6 +709,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      padding-bottom: 28px;
+    }
+    @media (max-width: 991px) {
+      .hero-visual-card {
+        margin-top: 20px;
+        padding-bottom: 36px;
+      }
     }
     .hero-image-frame {
       position: relative;
@@ -719,6 +726,7 @@
       padding: 12px;
       background: linear-gradient(135deg, rgba(212, 175, 55, 0.3) 0%, rgba(20, 20, 20, 0.95) 50%, rgba(45, 212, 212, 0.2) 100%);
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), 0 0 40px rgba(212, 175, 55, 0.2);
+      overflow: visible !important; /* CRITICAL: prevents clipping floating badge */
     }
     .hero-image-inner {
       width: 100%;
@@ -741,22 +749,45 @@
     }
     .hero-floating-badge {
       position: absolute;
-      bottom: -16px;
+      bottom: -18px;
       left: 50%;
       transform: translateX(-50%);
-      background: var(--bg-surface);
-      border: 1px solid var(--gold-primary);
+      background: linear-gradient(135deg, #1c1c1c 0%, #0c0c0c 100%);
+      border: 1.5px solid var(--gold-primary);
       border-radius: 999px;
-      padding: 8px 20px;
+      padding: 9px 22px;
       font-family: var(--font-heading);
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       font-weight: 700;
       color: var(--gold-light);
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.3);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.9), 0 0 20px rgba(212, 175, 55, 0.45);
       white-space: nowrap;
-      z-index: 5;
+      z-index: 25;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      user-select: none;
+    }
+    .hero-floating-badge:hover {
+      background: linear-gradient(135deg, #2a2a2a 0%, #161616 100%);
+      border-color: #ffffff;
+      color: #ffffff;
+      transform: translateX(-50%) translateY(-2px) scale(1.02);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.95), 0 0 28px rgba(212, 175, 55, 0.7);
+    }
+    @media (max-width: 600px) {
+      .hero-floating-badge {
+        font-size: 0.7rem;
+        padding: 8px 16px;
+        letter-spacing: 0.08em;
+        bottom: -14px;
+        max-width: 90vw;
+      }
     }
 
     @media (max-width: 768px) {
@@ -1740,9 +1771,11 @@
               <img src="assets/hero.png" alt="METANOIA — Crowned Black Panther Queen Mascot" class="hero-img" id="hero-mascot-img" loading="eager">
             </div>
 
-            <div class="hero-floating-badge">
-              <span>✦ Her Majesty $METANOIA ✦</span>
-            </div>
+            <a href="#about" class="hero-floating-badge" id="hero-queen-badge" title="Explore Her Majesty $METANOIA" aria-label="Her Majesty $METANOIA">
+              <span class="badge-crown" style="font-size: 0.95rem; line-height: 1;">👑</span>
+              <span>Her Majesty $METANOIA</span>
+              <span class="badge-sparkle" style="color: var(--gold-primary); font-size: 0.85rem; line-height: 1;">✦</span>
+            </a>
           </div>
         </div>
 
@@ -2825,6 +2858,18 @@
 
       // Setup Copy-to-Clipboard Functionality
       setupCopyHandlers();
+
+      // Setup Hero Queen Badge Navigation
+      const queenBadge = document.getElementById("hero-queen-badge");
+      if (queenBadge) {
+        queenBadge.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.getElementById("about");
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      }
 
       // Setup Mobile Navigation Menu
       setupMobileNavigation();
