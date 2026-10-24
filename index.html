@@ -846,25 +846,58 @@
       position: relative;
     }
     .highlight-icon-wrap {
-      width: 58px;
-      height: 58px;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--border-gold);
-      background: rgba(212, 175, 55, 0.06);
+      width: 72px;
+      height: 72px;
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.6rem;
-      color: var(--gold-light);
-      margin-bottom: 4px;
-      box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
-      transition: all 0.3s ease;
+      margin-bottom: 8px;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .highlight-icon-glow {
+      position: absolute;
+      inset: -6px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.38) 0%, rgba(212, 175, 55, 0.08) 55%, transparent 75%);
+      border-radius: 50%;
+      filter: blur(10px);
+      pointer-events: none;
+      z-index: 1;
+      transition: all 0.4s ease;
+    }
+    .highlight-icon-img {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      position: relative;
+      z-index: 2;
+      border-radius: 12px;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+      filter: drop-shadow(0 4px 12px rgba(212, 175, 55, 0.28));
+      display: block;
     }
     .highlight-card:hover .highlight-icon-wrap {
-      border-color: var(--gold-primary);
-      background: rgba(212, 175, 55, 0.15);
-      transform: scale(1.08);
-      color: var(--gold-light);
+      transform: translateY(-4px);
+    }
+    .highlight-card:hover .highlight-icon-glow {
+      inset: -12px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.58) 0%, rgba(212, 175, 55, 0.18) 60%, transparent 80%);
+      filter: blur(14px);
+    }
+    .highlight-card:hover .highlight-icon-img {
+      animation: gentle-float 2.4s ease-in-out infinite alternate;
+      filter: drop-shadow(0 8px 22px rgba(212, 175, 55, 0.55));
+    }
+    @keyframes gentle-float {
+      0% {
+        transform: translateY(0px) scale(1.06);
+      }
+      50% {
+        transform: translateY(-6px) scale(1.08);
+      }
+      100% {
+        transform: translateY(0px) scale(1.06);
+      }
     }
     .highlight-title {
       font-size: 1.2rem;
@@ -1826,7 +1859,10 @@
           <span class="art-deco-corner corner-bl"></span>
           <span class="art-deco-corner corner-br"></span>
 
-          <div class="highlight-icon-wrap">⚡</div>
+          <div class="highlight-icon-wrap">
+            <span class="highlight-icon-glow" aria-hidden="true"></span>
+            <img src="assets/icon-fees.png" alt="Low Fees Icon — 3D Golden Lightning Bolt" class="highlight-icon-img" width="72" height="72" loading="lazy">
+          </div>
           <h3 class="highlight-title gold-gradient-text">Low Fees on BSC</h3>
           <p class="highlight-desc">
             Engineered on BNB Smart Chain to deliver sub-second transaction finality and micro-cent gas fees. Every holder trades with sovereign efficiency and zero tax penalties.
@@ -1840,7 +1876,10 @@
           <span class="art-deco-corner corner-bl"></span>
           <span class="art-deco-corner corner-br"></span>
 
-          <div class="highlight-icon-wrap">👑</div>
+          <div class="highlight-icon-wrap">
+            <span class="highlight-icon-glow" aria-hidden="true"></span>
+            <img src="assets/icon-growth.png" alt="Fast Community Growth Icon — Brilliant Diamond" class="highlight-icon-img" width="72" height="72" loading="lazy">
+          </div>
           <h3 class="highlight-title gold-gradient-text">Fast Community Growth</h3>
           <p class="highlight-desc">
             "Community from day one. Early holders = family." Organic virality powered by active loyalists, royal ambassador tiers, and collective wealth creation.
@@ -1854,7 +1893,10 @@
           <span class="art-deco-corner corner-bl"></span>
           <span class="art-deco-corner corner-br"></span>
 
-          <div class="highlight-icon-wrap">💎</div>
+          <div class="highlight-icon-wrap">
+            <span class="highlight-icon-glow" aria-hidden="true"></span>
+            <img src="assets/icon-luxury.png" alt="Luxury Branding Icon — Ornate Royal Crown" class="highlight-icon-img" width="72" height="72" loading="lazy">
+          </div>
           <h3 class="highlight-title gold-gradient-text">Luxury Branding</h3>
           <p class="highlight-desc">
             An iconic crowned panther aesthetic combining pure jet-black velvet textures, art-deco gold architecture, and cyber-cyan AI signatures. A regal presence that dominates any room.
