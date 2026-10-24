@@ -1,0 +1,2784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>METANOIA ($METANOIA) — The First Female Luxury Feline AI Token</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Where AI meets feline royalty. METANOIA is the premier female luxury feline AI token on BNB Smart Chain. 0% Tax, 50T Supply, Locked LP. #NotJustACat #QUEEN">
+  <meta name="keywords" content="METANOIA, $METANOIA, BNB Smart Chain, BSC, BEP-20, AI token, Luxury crypto, Feline AI, PancakeSwap">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://metanoia.luxury/">
+  <meta property="og:title" content="METANOIA ($METANOIA) — Where AI Meets Feline Royalty">
+  <meta property="og:description" content="The First Female Luxury Feline AI Token on BNB Smart Chain. Fair launch, 0% tax, 100% locked LP. Community from day one. Early holders = family.">
+  <meta property="og:image" content="assets/hero.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="METANOIA ($METANOIA) — Where AI Meets Feline Royalty">
+  <meta name="twitter:description" content="The First Female Luxury Feline AI Token on BNB Smart Chain. #NotJustACat #QUEEN">
+  <meta name="twitter:image" content="assets/hero.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+
+  <!-- Google Fonts: Cinzel (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       METANOIA LUXURY THEME & RESET
+       Palette: Luxury Black (#0a0a0a), Gold Gradient (#d4af37 -> #f5e6a3), Cyan Accent (#2dd4d4)
+       ========================================================================== */
+    :root {
+      --bg-deep: #0a0a0a;
+      --bg-surface: #111111;
+      --bg-surface-elevated: #161616;
+      --gold-primary: #d4af37;
+      --gold-light: #f5e6a3;
+      --gold-dark: #aa771c;
+      --gold-muted: rgba(212, 175, 55, 0.4);
+      --cyan-accent: #2dd4d4;
+      --cyan-glow: rgba(45, 212, 212, 0.35);
+      --text-main: #f0f0f0;
+      --text-muted: #999999;
+      --border-gold: rgba(212, 175, 55, 0.25);
+      --border-gold-strong: rgba(212, 175, 55, 0.65);
+      --font-heading: 'Cinzel', serif, Georgia;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-deep);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: var(--bg-deep);
+      overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* Selection */
+    ::selection {
+      background: var(--gold-primary);
+      color: #000;
+    }
+
+    /* Subtle Gold Particles Canvas */
+    #gold-particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.55;
+    }
+
+    /* Ambient Background Glows */
+    .ambient-glow {
+      position: fixed;
+      pointer-events: none;
+      border-radius: 50%;
+      filter: blur(120px);
+      z-index: 0;
+      opacity: 0.12;
+    }
+    .glow-gold-1 {
+      top: 10%;
+      right: 5%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, var(--gold-primary) 0%, transparent 70%);
+    }
+    .glow-cyan-1 {
+      top: 45%;
+      left: 0%;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, var(--cyan-accent) 0%, transparent 70%);
+      opacity: 0.08;
+    }
+    .glow-gold-2 {
+      bottom: 10%;
+      right: 15%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--gold-dark) 0%, transparent 70%);
+    }
+
+    /* ==========================================================================
+       TYPOGRAPHY & UTILITIES
+       ========================================================================== */
+    h1, h2, h3, h4, .font-heading {
+      font-family: var(--font-heading);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .gold-gradient-text {
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+    }
+
+    .cyan-text {
+      color: var(--cyan-accent);
+      text-shadow: 0 0 12px var(--cyan-glow);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-padding {
+      padding: 96px 0;
+    }
+    @media (max-width: 768px) {
+      .section-padding {
+        padding: 64px 0;
+      }
+    }
+
+    /* Section Header */
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 56px auto;
+    }
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      padding: 6px 16px;
+      border: 1px solid var(--border-gold);
+      border-radius: 999px;
+      background: rgba(212, 175, 55, 0.05);
+      margin-bottom: 18px;
+    }
+    .section-tag::before, .section-tag::after {
+      content: "◆";
+      font-size: 0.6rem;
+      color: var(--gold-primary);
+    }
+    .section-title {
+      font-size: 2.6rem;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 2rem;
+      }
+      .section-subtitle {
+        font-size: 0.95rem;
+      }
+    }
+
+    /* ==========================================================================
+       ART-DECO FRAMES & CARDS
+       ========================================================================== */
+    .art-deco-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-md);
+      position: relative;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+    }
+    .art-deco-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+      opacity: 0.5;
+      transition: opacity 0.3s ease;
+    }
+    .art-deco-card:hover {
+      border-color: var(--gold-primary);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(212, 175, 55, 0.12);
+    }
+    .art-deco-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Art-Deco Corner Accents */
+    .art-deco-corner {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      pointer-events: none;
+      z-index: 3;
+    }
+    .corner-tl { top: 6px; left: 6px; border-top: 1px solid var(--gold-primary); border-left: 1px solid var(--gold-primary); }
+    .corner-tr { top: 6px; right: 6px; border-top: 1px solid var(--gold-primary); border-right: 1px solid var(--gold-primary); }
+    .corner-bl { bottom: 6px; left: 6px; border-bottom: 1px solid var(--gold-primary); border-left: 1px solid var(--gold-primary); }
+    .corner-br { bottom: 6px; right: 6px; border-bottom: 1px solid var(--gold-primary); border-right: 1px solid var(--gold-primary); }
+
+    /* ==========================================================================
+       BUTTONS
+       ========================================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
+      color: #0a0a0a;
+      border: 1px solid var(--gold-light);
+      box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+    }
+    .btn-gold:hover {
+      box-shadow: 0 8px 30px rgba(212, 175, 55, 0.55);
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+    }
+    .btn-outline {
+      background: rgba(10, 10, 10, 0.85);
+      color: var(--gold-light);
+      border: 1px solid var(--border-gold-strong);
+      backdrop-blur: 8px;
+    }
+    .btn-outline:hover {
+      background: rgba(212, 175, 55, 0.12);
+      border-color: var(--gold-light);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(212, 175, 55, 0.2);
+    }
+    .btn-cyan {
+      background: transparent;
+      color: var(--cyan-accent);
+      border: 1px solid var(--cyan-accent);
+    }
+    .btn-cyan:hover {
+      background: rgba(45, 212, 212, 0.15);
+      box-shadow: 0 0 20px var(--cyan-glow);
+    }
+
+    /* ==========================================================================
+       SECTION 1: STICKY NAVBAR
+       ========================================================================== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(10, 10, 10, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-gold);
+      transition: all 0.3s ease;
+    }
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid var(--gold-primary);
+      object-fit: cover;
+      box-shadow: 0 0 16px rgba(212, 175, 55, 0.4);
+      transition: transform 0.3s ease;
+    }
+    .brand:hover .brand-logo {
+      transform: scale(1.06) rotate(3deg);
+    }
+    .brand-text-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+    .brand-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: 0.08em;
+    }
+    .brand-sub {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      color: var(--cyan-accent);
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-link {
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.25s ease;
+      position: relative;
+      padding: 6px 0;
+    }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--gold-primary);
+      transition: width 0.25s ease;
+    }
+    .nav-link:hover {
+      color: var(--gold-light);
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta-btn {
+      padding: 9px 20px;
+      font-size: 0.75rem;
+    }
+
+    /* Mobile Hamburger */
+    .hamburger-btn {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-sm);
+      width: 42px;
+      height: 42px;
+      cursor: pointer;
+      position: relative;
+      z-index: 102;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+    }
+    .hamburger-bar {
+      width: 22px;
+      height: 2px;
+      background: var(--gold-primary);
+      transition: all 0.3s ease;
+    }
+    .hamburger-btn.active .hamburger-bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .hamburger-btn.active .hamburger-bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger-btn.active .hamburger-bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Mobile Drawer */
+    .mobile-menu-drawer {
+      display: none;
+      position: fixed;
+      top: 76px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 76px);
+      background: rgba(10, 10, 10, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-gold);
+      padding: 32px 24px;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 101;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-10px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow-y: auto;
+    }
+    .mobile-menu-drawer.open {
+      display: flex;
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    .mobile-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .mobile-nav-link {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-main);
+      text-decoration: none;
+      display: block;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .mobile-nav-link:hover {
+      color: var(--gold-light);
+    }
+    .mobile-cta-box {
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    @media (max-width: 991px) {
+      .nav-menu, .nav-cta-btn {
+        display: none;
+      }
+      .hamburger-btn {
+        display: flex;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION 2: HERO SECTION
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      padding: 60px 0 90px 0;
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 48px;
+    }
+    @media (max-width: 991px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+
+    .hero-badge-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(45, 212, 212, 0.08);
+      border: 1px solid rgba(45, 212, 212, 0.35);
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--cyan-accent);
+      margin-bottom: 20px;
+    }
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--cyan-accent);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--cyan-accent);
+      animation: cyanPulse 2s infinite;
+    }
+    @keyframes cyanPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    .hero-title {
+      font-size: 4rem;
+      line-height: 1.05;
+      margin-bottom: 16px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+    }
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--gold-light);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+    .hero-tagline {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      max-width: 580px;
+    }
+    @media (max-width: 991px) {
+      .hero-tagline {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .hero-hashtags {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    @media (max-width: 991px) {
+      .hero-hashtags {
+        justify-content: center;
+      }
+    }
+    .hashtag-pill {
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid var(--border-gold);
+      padding: 4px 12px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* Contract Address Copy Box */
+    .ca-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-gold-strong);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      margin-bottom: 32px;
+      max-width: 580px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+    @media (max-width: 991px) {
+      .ca-box {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ca-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      font-family: var(--font-heading);
+    }
+    .ca-chain-tag {
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .ca-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #080808;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: var(--radius-sm);
+      padding: 8px 12px;
+    }
+    .ca-address {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.85rem;
+      color: var(--gold-light);
+      word-break: break-all;
+      flex: 1;
+      text-align: left;
+    }
+    .ca-copy-btn {
+      background: var(--gold-primary);
+      color: #0a0a0a;
+      border: none;
+      border-radius: 6px;
+      padding: 7px 14px;
+      font-family: var(--font-heading);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+    .ca-copy-btn:hover {
+      background: var(--gold-light);
+      transform: scale(1.02);
+    }
+    .ca-copy-btn.copied {
+      background: var(--cyan-accent);
+      color: #000;
+      box-shadow: 0 0 14px var(--cyan-glow);
+    }
+
+    .hero-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    @media (max-width: 991px) {
+      .hero-btn-group {
+        justify-content: center;
+      }
+    }
+
+    /* Hero Mascot Visual Card */
+    .hero-visual-card {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-image-frame {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      aspect-ratio: 1/1;
+      border-radius: var(--radius-lg);
+      padding: 12px;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.3) 0%, rgba(20, 20, 20, 0.95) 50%, rgba(45, 212, 212, 0.2) 100%);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), 0 0 40px rgba(212, 175, 55, 0.2);
+    }
+    .hero-image-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: calc(var(--radius-lg) - 6px);
+      overflow: hidden;
+      background: #000000;
+      position: relative;
+      border: 1px solid var(--border-gold);
+    }
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .hero-image-frame:hover .hero-img {
+      transform: scale(1.04);
+    }
+    .hero-floating-badge {
+      position: absolute;
+      bottom: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-surface);
+      border: 1px solid var(--gold-primary);
+      border-radius: 999px;
+      padding: 8px 20px;
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.3);
+      white-space: nowrap;
+      z-index: 5;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.8rem;
+      }
+      .hero-subtitle {
+        font-size: 1.05rem;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION 3: ABOUT METANOIA
+       ========================================================================== */
+    .about-narrative-card {
+      padding: 42px 36px;
+      margin-bottom: 48px;
+      text-align: center;
+      position: relative;
+    }
+    .about-lead-text {
+      font-size: 1.28rem;
+      font-weight: 400;
+      color: #e5e5e5;
+      line-height: 1.8;
+      max-width: 920px;
+      margin: 0 auto 24px auto;
+    }
+    .about-lead-text strong {
+      color: var(--gold-light);
+      font-family: var(--font-heading);
+      letter-spacing: 0.02em;
+    }
+    .about-hashtags-row {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    /* 3 Highlight Cards */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    @media (max-width: 991px) {
+      .highlights-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .highlight-card {
+      padding: 36px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+    }
+    .highlight-icon-wrap {
+      width: 58px;
+      height: 58px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-gold);
+      background: rgba(212, 175, 55, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      color: var(--gold-light);
+      margin-bottom: 4px;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+      transition: all 0.3s ease;
+    }
+    .highlight-card:hover .highlight-icon-wrap {
+      border-color: var(--gold-primary);
+      background: rgba(212, 175, 55, 0.15);
+      transform: scale(1.08);
+      color: var(--gold-light);
+    }
+    .highlight-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    .highlight-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       SECTION 4: TOKENOMICS
+       ========================================================================== */
+    .tokenomics-layout {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (max-width: 991px) {
+      .tokenomics-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Facts Grid */
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 600px) {
+      .facts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .fact-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: border-color 0.25s ease;
+    }
+    .fact-box:hover {
+      border-color: var(--gold-primary);
+    }
+    .fact-label {
+      font-size: 0.72rem;
+      font-family: var(--font-heading);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .fact-value {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ffffff;
+      font-family: var(--font-body);
+    }
+    .fact-value.gold {
+      color: var(--gold-light);
+    }
+    .fact-value.cyan {
+      color: var(--cyan-accent);
+    }
+
+    /* Gold Donut Chart Card */
+    .chart-card {
+      padding: 36px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .chart-container {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      margin: 12px auto 28px auto;
+    }
+    .donut-svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+    .donut-circle-bg {
+      fill: none;
+      stroke: #1e1e1e;
+      stroke-width: 22;
+    }
+    .donut-segment {
+      fill: none;
+      stroke-width: 22;
+      stroke-linecap: butt;
+      transition: stroke-width 0.3s ease, filter 0.3s ease;
+      cursor: pointer;
+    }
+    .donut-segment:hover {
+      stroke-width: 26;
+      filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.6));
+    }
+    .segment-lp {
+      stroke: url(#goldLinearGradient);
+      stroke-dasharray: 565.48; /* 2 * PI * 90 */
+      stroke-dashoffset: 56.54; /* 90% is 508.932 */
+    }
+    .segment-cex {
+      stroke: #2dd4d4;
+      stroke-dasharray: 565.48;
+      stroke-dashoffset: 537.21; /* 5% */
+      transform: rotate(324deg); /* 90% = 324deg */
+      transform-origin: 50% 50%;
+    }
+    .segment-airdrop {
+      stroke: #aa771c;
+      stroke-dasharray: 565.48;
+      stroke-dashoffset: 537.21; /* 5% */
+      transform: rotate(342deg); /* 95% = 342deg */
+      transform-origin: 50% 50%;
+    }
+
+    .chart-center-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .chart-crown-icon {
+      font-size: 1.6rem;
+      margin-bottom: 2px;
+      color: var(--gold-primary);
+    }
+    .chart-center-title {
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      letter-spacing: 0.08em;
+    }
+    .chart-center-sub {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* Donut Legend */
+    .chart-legend {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      background: #080808;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      text-align: left;
+    }
+    .legend-indicator {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .legend-color-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+    }
+    .dot-lp { background: var(--gold-primary); box-shadow: 0 0 8px rgba(212, 175, 55, 0.5); }
+    .dot-cex { background: var(--cyan-accent); box-shadow: 0 0 8px var(--cyan-glow); }
+    .dot-airdrop { background: #aa771c; }
+    .legend-percent {
+      font-weight: 800;
+      font-family: var(--font-heading);
+      color: var(--gold-light);
+    }
+
+    /* ==========================================================================
+       SECTION 5: ROADMAP (RESPONSIVE: HORIZONTAL DESKTOP / VERTICAL MOBILE)
+       ========================================================================== */
+    .roadmap-container {
+      position: relative;
+    }
+
+    /* Desktop Horizontal Roadmap (min-width: 992px) */
+    @media (min-width: 992px) {
+      .roadmap-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        position: relative;
+      }
+      .roadmap-grid::before {
+        content: "";
+        position: absolute;
+        top: 48px;
+        left: 5%;
+        right: 5%;
+        height: 2px;
+        background: linear-gradient(90deg, var(--gold-primary), var(--cyan-accent), var(--gold-light), var(--gold-dark));
+        z-index: 1;
+        opacity: 0.45;
+      }
+      .phase-card {
+        padding: 32px 22px;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .phase-node {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: var(--bg-deep);
+        border: 2px solid var(--gold-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-heading);
+        font-weight: 800;
+        font-size: 0.85rem;
+        color: var(--gold-light);
+        margin-bottom: 24px;
+        box-shadow: 0 0 16px rgba(212, 175, 55, 0.4);
+      }
+    }
+
+    /* Mobile Vertical Timeline (max-width: 991px) */
+    @media (max-width: 991px) {
+      .roadmap-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        position: relative;
+        padding-left: 28px;
+      }
+      .roadmap-grid::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 10px;
+        width: 2px;
+        background: linear-gradient(180deg, var(--gold-primary), var(--cyan-accent), var(--gold-light), var(--gold-dark));
+        opacity: 0.5;
+      }
+      .phase-card {
+        padding: 24px 20px;
+        position: relative;
+      }
+      .phase-card::before {
+        content: "";
+        position: absolute;
+        top: 24px;
+        left: -24px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--gold-primary);
+        box-shadow: 0 0 10px var(--gold-primary);
+      }
+      .phase-node {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 10px;
+        background: rgba(212, 175, 55, 0.1);
+        border: 1px solid var(--border-gold);
+        border-radius: 999px;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 0.75rem;
+        color: var(--gold-light);
+        margin-bottom: 12px;
+      }
+    }
+
+    .phase-badge {
+      font-size: 0.72rem;
+      font-family: var(--font-heading);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--cyan-accent);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .phase-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+    .phase-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+    .phase-list li {
+      position: relative;
+      padding-left: 18px;
+      line-height: 1.45;
+    }
+    .phase-list li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--gold-primary);
+      font-size: 0.75rem;
+    }
+
+    /* ==========================================================================
+       SECTION 6: SECURITY (NO AUDITED BADGE)
+       ========================================================================== */
+    /* Featured LP Locked Card */
+    .featured-lp-card {
+      padding: 38px 32px;
+      margin-bottom: 32px;
+      background: radial-gradient(circle at 15% 50%, rgba(212, 175, 55, 0.12) 0%, rgba(14, 14, 14, 0.98) 100%);
+      border: 1px solid var(--gold-primary);
+      box-shadow: 0 12px 45px rgba(0, 0, 0, 0.85), 0 0 35px rgba(212, 175, 55, 0.22);
+    }
+    .featured-lp-layout {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    @media (max-width: 991px) {
+      .featured-lp-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .featured-lp-card {
+        padding: 28px 20px;
+      }
+    }
+    .featured-lp-image-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+      aspect-ratio: 1 / 1;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 2px solid var(--gold-primary);
+      box-shadow: 0 0 35px rgba(212, 175, 55, 0.35);
+      background: #000000;
+    }
+    .featured-lp-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .featured-lp-image-wrap:hover .featured-lp-img {
+      transform: scale(1.03);
+    }
+    .featured-lp-details {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .featured-lp-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 991px) {
+      .featured-lp-badge-row {
+        justify-content: center;
+      }
+    }
+    .featured-lp-title {
+      font-size: 2.2rem;
+      line-height: 1.15;
+    }
+    @media (max-width: 768px) {
+      .featured-lp-title {
+        font-size: 1.75rem;
+      }
+    }
+    .featured-lp-subtitle {
+      font-size: 1.1rem;
+      color: var(--gold-light);
+      font-family: var(--font-heading);
+      font-weight: 600;
+    }
+    .featured-lp-expiry-box {
+      background: rgba(8, 8, 8, 0.9);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 991px) {
+      .featured-lp-expiry-box {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+    .featured-lp-expiry-label {
+      font-size: 0.72rem;
+      font-family: var(--font-heading);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+    .featured-lp-expiry-val {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      font-family: var(--font-body);
+    }
+    .featured-lp-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-top: 8px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 991px) {
+      .featured-lp-actions {
+        justify-content: center;
+      }
+    }
+
+    .security-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 991px) {
+      .security-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 640px) {
+      .security-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .security-card {
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      border: 1px solid var(--border-gold);
+    }
+    .security-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .security-icon {
+      font-size: 1.8rem;
+      color: var(--gold-light);
+    }
+    .security-status {
+      font-size: 0.68rem;
+      font-family: var(--font-heading);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(45, 212, 212, 0.1);
+      border: 1px solid rgba(45, 212, 212, 0.3);
+      color: var(--cyan-accent);
+      font-weight: 700;
+    }
+    .security-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+    .security-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .proof-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      text-decoration: none;
+      transition: all 0.25s ease;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .proof-link:hover {
+      color: var(--cyan-accent);
+      gap: 9px;
+    }
+
+    /* ==========================================================================
+       SECTION 7: HOW TO BUY
+       ========================================================================== */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 991px) {
+      .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .step-card {
+      padding: 32px 22px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .step-num {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 18px;
+      color: var(--gold-muted);
+      transition: color 0.3s ease;
+    }
+    .step-card:hover .step-num {
+      color: var(--gold-light);
+    }
+    .step-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .step-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       SECTION 8: COMMUNITY
+       ========================================================================== */
+    .community-banner {
+      padding: 64px 36px;
+      text-align: center;
+      background: radial-gradient(circle at center, #181818 0%, #0c0c0c 100%);
+      border: 1px solid var(--border-gold-strong);
+      position: relative;
+      overflow: hidden;
+    }
+    .community-badge {
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cyan-accent);
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+    .community-title {
+      font-size: 2.8rem;
+      margin-bottom: 16px;
+    }
+    .community-tagline {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto 36px auto;
+    }
+    .social-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 24px;
+      background: #0e0e0e;
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-sm);
+      color: #ffffff;
+      font-family: var(--font-heading);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .social-btn:hover {
+      border-color: var(--gold-light);
+      background: rgba(212, 175, 55, 0.12);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.25);
+    }
+    .social-btn.cyan-btn:hover {
+      border-color: var(--cyan-accent);
+      background: rgba(45, 212, 212, 0.12);
+      box-shadow: 0 6px 20px var(--cyan-glow);
+    }
+
+    /* ==========================================================================
+       SECTION 9: FOOTER
+       ========================================================================== */
+    .site-footer {
+      border-top: 1px solid var(--border-gold);
+      padding: 64px 0 32px 0;
+      background: #070707;
+      position: relative;
+      z-index: 2;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+
+    .footer-brand-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-top: 14px;
+      max-width: 380px;
+      line-height: 1.6;
+    }
+    .footer-ca-mini {
+      margin-top: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #111;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 6px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.78rem;
+      font-family: 'Courier New', Courier, monospace;
+      color: var(--gold-light);
+    }
+    .footer-ca-copy {
+      background: transparent;
+      border: none;
+      color: var(--cyan-accent);
+      cursor: pointer;
+      font-family: var(--font-heading);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .footer-col-title {
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      margin-bottom: 18px;
+      color: var(--gold-light);
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-link {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+    .footer-link:hover {
+      color: var(--gold-light);
+    }
+
+    /* Disclaimer Box */
+    .footer-disclaimer-box {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 28px;
+      text-align: center;
+    }
+    .footer-disclaimer-text {
+      font-size: 0.78rem;
+      color: #777777;
+      line-height: 1.65;
+      max-width: 820px;
+      margin: 0 auto 18px auto;
+    }
+    .footer-bottom-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: #555555;
+    }
+    @media (max-width: 600px) {
+      .footer-bottom-row {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    /* ==========================================================================
+       SCROLL REVEAL ANIMATIONS
+       ========================================================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Accessibility: Prefers Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Luxury Glows -->
+  <div class="ambient-glow glow-gold-1"></div>
+  <div class="ambient-glow glow-cyan-1"></div>
+  <div class="ambient-glow glow-gold-2"></div>
+
+  <!-- Subtle Gold Shimmer / Particles Canvas -->
+  <canvas id="gold-particles"></canvas>
+
+  <!-- ==========================================================================
+       SECTION 1: STICKY NAVBAR
+       ========================================================================== -->
+  <nav class="navbar" id="navbar" aria-label="Main Navigation">
+    <div class="container navbar-container">
+      <a href="#" class="brand">
+        <img src="assets/logo.png" alt="METANOIA Logo" class="brand-logo" id="nav-logo" loading="lazy">
+        <div class="brand-text-wrap">
+          <span class="brand-title gold-gradient-text">METANOIA</span>
+          <span class="brand-sub">AI &bull; FELINE ROYALTY</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#tokenomics" class="nav-link">Tokenomics</a></li>
+        <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+        <li><a href="#security" class="nav-link">Security</a></li>
+        <li><a href="#how-to-buy" class="nav-link">How to Buy</a></li>
+        <li><a href="#community" class="nav-link">Community</a></li>
+      </ul>
+
+      <!-- Action Button -->
+      <a href="#" id="nav-buy-btn" target="_blank" rel="noopener noreferrer" class="btn btn-gold nav-cta-btn">
+        Buy $METANOIA
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-menu-drawer" id="mobile-menu-drawer">
+      <ul class="mobile-nav-list">
+        <li><a href="#about" class="mobile-nav-link" data-close-drawer>About</a></li>
+        <li><a href="#tokenomics" class="mobile-nav-link" data-close-drawer>Tokenomics</a></li>
+        <li><a href="#roadmap" class="mobile-nav-link" data-close-drawer>Roadmap</a></li>
+        <li><a href="#security" class="mobile-nav-link" data-close-drawer>Security</a></li>
+        <li><a href="#how-to-buy" class="mobile-nav-link" data-close-drawer>How to Buy</a></li>
+        <li><a href="#community" class="mobile-nav-link" data-close-drawer>Community</a></li>
+      </ul>
+      <div class="mobile-cta-box">
+        <a href="#" id="mobile-buy-btn" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
+          Buy on PancakeSwap
+        </a>
+        <a href="#" id="mobile-chart-btn" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          View Dex Chart
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       SECTION 2: HERO SECTION
+       ========================================================================== -->
+  <header class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left: Text & CA Copy -->
+        <div class="hero-content reveal">
+          <div class="hero-badge-wrap">
+            <span class="pulse-dot"></span>
+            <span>BEP-20 &bull; BNB Smart Chain &bull; Chain ID 56</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="gold-gradient-text">METANOIA</span>
+          </h1>
+
+          <h2 class="hero-subtitle">
+            The First Female Luxury Feline AI Token on BNB Smart Chain
+          </h2>
+
+          <p class="hero-tagline">
+            "Where AI meets feline royalty." Built for true connoisseurs of elegance, decentralized intelligence, and high-society Web3 culture.
+          </p>
+
+          <div class="hero-hashtags">
+            <span class="hashtag-pill">#NotJustACat</span>
+            <span class="hashtag-pill">#QUEEN</span>
+            <span class="hashtag-pill">#LuxuryAI</span>
+          </div>
+
+          <!-- Contract Address Box with One-Click Copy -->
+          <div class="ca-box">
+            <div class="ca-header">
+              <span>Official Smart Contract</span>
+              <span class="ca-chain-tag">BNB Chain &bull; 0% Tax</span>
+            </div>
+            <div class="ca-content">
+              <span class="ca-address" id="hero-ca-text">0xA4555A9f6bEf7F42FB341504722163a2ee180F0d</span>
+              <button class="ca-copy-btn" id="hero-copy-btn" title="Copy contract to clipboard" aria-label="Copy contract address">
+                <span id="hero-copy-label">Copy CA</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Buttons: PancakeSwap & Chart -->
+          <div class="hero-btn-group">
+            <a href="#" id="hero-buy-btn" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
+              Buy on PancakeSwap
+            </a>
+            <a href="#" id="hero-chart-btn" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              View Chart
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Crowned Black Panther Queen Artwork Frame -->
+        <div class="hero-visual-card reveal">
+          <div class="hero-image-frame art-deco-card">
+            <span class="art-deco-corner corner-tl"></span>
+            <span class="art-deco-corner corner-tr"></span>
+            <span class="art-deco-corner corner-bl"></span>
+            <span class="art-deco-corner corner-br"></span>
+            
+            <div class="hero-image-inner">
+              <img src="assets/hero.png" alt="METANOIA — Crowned Black Panther Queen Mascot" class="hero-img" id="hero-mascot-img" loading="eager">
+            </div>
+
+            <div class="hero-floating-badge">
+              <span>✦ Her Majesty $METANOIA ✦</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 3: ABOUT METANOIA
+       ========================================================================== -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      
+      <div class="section-header reveal">
+        <span class="section-tag">Philosophy &amp; Identity</span>
+        <h2 class="section-title">The Rise of the <span class="gold-gradient-text">Queen</span></h2>
+        <p class="section-subtitle">
+          Crafted for those who demand grandeur, intellect, and unstoppable momentum in decentralized finance.
+        </p>
+      </div>
+
+      <!-- Main Narrative Card -->
+      <div class="art-deco-card about-narrative-card reveal">
+        <span class="art-deco-corner corner-tl"></span>
+        <span class="art-deco-corner corner-tr"></span>
+        <span class="art-deco-corner corner-bl"></span>
+        <span class="art-deco-corner corner-br"></span>
+
+        <p class="about-lead-text">
+          <strong>METANOIA</strong> merges artificial intelligence with high-luxury branding and community-driven growth. It embodies elegance, intelligence and empowerment, crafted as a <strong>QUEEN</strong>, not just another cat.
+        </p>
+        <p class="about-lead-text" style="font-size: 1.05rem; color: #b3b3b3; margin-bottom: 24px;">
+          Where typical meme tokens trade on ephemeral hype, METANOIA establishes an opulent standard: haute couture visuals, algorithmic precision, and an exclusive culture of distinction.
+        </p>
+        <div class="about-hashtags-row">
+          <span class="hashtag-pill" style="font-size: 0.95rem; padding: 6px 16px;">#NotJustACat</span>
+          <span class="hashtag-pill" style="font-size: 0.95rem; padding: 6px 16px;">#QUEEN</span>
+        </div>
+      </div>
+
+      <!-- 3 Highlight Cards -->
+      <div class="highlights-grid">
+        
+        <!-- Card 1 -->
+        <div class="art-deco-card highlight-card reveal">
+          <span class="art-deco-corner corner-tl"></span>
+          <span class="art-deco-corner corner-tr"></span>
+          <span class="art-deco-corner corner-bl"></span>
+          <span class="art-deco-corner corner-br"></span>
+
+          <div class="highlight-icon-wrap">⚡</div>
+          <h3 class="highlight-title gold-gradient-text">Low Fees on BSC</h3>
+          <p class="highlight-desc">
+            Engineered on BNB Smart Chain to deliver sub-second transaction finality and micro-cent gas fees. Every holder trades with sovereign efficiency and zero tax penalties.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="art-deco-card highlight-card reveal">
+          <span class="art-deco-corner corner-tl"></span>
+          <span class="art-deco-corner corner-tr"></span>
+          <span class="art-deco-corner corner-bl"></span>
+          <span class="art-deco-corner corner-br"></span>
+
+          <div class="highlight-icon-wrap">👑</div>
+          <h3 class="highlight-title gold-gradient-text">Fast Community Growth</h3>
+          <p class="highlight-desc">
+            "Community from day one. Early holders = family." Organic virality powered by active loyalists, royal ambassador tiers, and collective wealth creation.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="art-deco-card highlight-card reveal">
+          <span class="art-deco-corner corner-tl"></span>
+          <span class="art-deco-corner corner-tr"></span>
+          <span class="art-deco-corner corner-bl"></span>
+          <span class="art-deco-corner corner-br"></span>
+
+          <div class="highlight-icon-wrap">💎</div>
+          <h3 class="highlight-title gold-gradient-text">Luxury Branding</h3>
+          <p class="highlight-desc">
+            An iconic crowned panther aesthetic combining pure jet-black velvet textures, art-deco gold architecture, and cyber-cyan AI signatures. A regal presence that dominates any room.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: TOKENOMICS
+       ========================================================================== -->
+  <section id="tokenomics" class="section-padding" style="background: rgba(14, 14, 14, 0.4); border-top: 1px solid var(--border-gold); border-bottom: 1px solid var(--border-gold);">
+    <div class="container">
+      
+      <div class="section-header reveal">
+        <span class="section-tag">Economic Blueprint</span>
+        <h2 class="section-title">Royal <span class="gold-gradient-text">Tokenomics</span></h2>
+        <p class="section-subtitle">
+          Pristine, fair-launch mechanics with 0% trading tax and locked liquidity.
+        </p>
+      </div>
+
+      <div class="tokenomics-layout">
+        
+        <!-- Facts Grid -->
+        <div class="facts-grid reveal">
+          <div class="fact-box">
+            <span class="fact-label">Token Name</span>
+            <span class="fact-value gold">METANOIA</span>
+          </div>
+
+          <div class="fact-box">
+            <span class="fact-label">Ticker Symbol</span>
+            <span class="fact-value gold">$METANOIA</span>
+          </div>
+
+          <div class="fact-box">
+            <span class="fact-label">Token Standard</span>
+            <span class="fact-value">BEP-20</span>
+          </div>
+
+          <div class="fact-box">
+            <span class="fact-label">Blockchain</span>
+            <span class="fact-value">BNB Smart Chain</span>
+          </div>
+
+          <div class="fact-box">
+            <span class="fact-label">Chain ID</span>
+            <span class="fact-value cyan">56</span>
+          </div>
+
+          <div class="fact-box">
+            <span class="fact-label">Trading Taxes</span>
+            <span class="fact-value cyan">0% Buy / 0% Sell</span>
+          </div>
+
+          <div class="fact-box" style="grid-column: span 2;">
+            <span class="fact-label">Total Supply</span>
+            <span class="fact-value gold">50,000,000,000,000 (50 Trillion)</span>
+          </div>
+
+          <div class="fact-box">
+            <span class="fact-label">Exchange Pool</span>
+            <span class="fact-value">PancakeSwap V3</span>
+          </div>
+
+          <div class="fact-box">
+            <span class="fact-label">Launch Model</span>
+            <span class="fact-value gold">100% Fair Launch</span>
+          </div>
+
+          <div class="fact-box" style="grid-column: span 2;">
+            <span class="fact-label">Presale / Team Allocation</span>
+            <span class="fact-value" style="color: #4ade80;">No Presale &bull; No Team Allocation</span>
+          </div>
+        </div>
+
+        <!-- Animated Gold Donut Chart Card -->
+        <div class="art-deco-card chart-card reveal">
+          <span class="art-deco-corner corner-tl"></span>
+          <span class="art-deco-corner corner-tr"></span>
+          <span class="art-deco-corner corner-bl"></span>
+          <span class="art-deco-corner corner-br"></span>
+
+          <h3 style="font-size: 1.15rem; margin-bottom: 6px;" class="gold-gradient-text">Supply Distribution</h3>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">Fully verifiable on BNB Chain</p>
+
+          <!-- SVG Donut Chart with Gradients -->
+          <div class="chart-container">
+            <svg class="donut-svg" viewBox="0 0 220 220" role="img" aria-label="METANOIA token allocation donut chart">
+              <defs>
+                <linearGradient id="goldLinearGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#f5e6a3" />
+                  <stop offset="50%" stop-color="#d4af37" />
+                  <stop offset="100%" stop-color="#aa771c" />
+                </linearGradient>
+              </defs>
+              <!-- Background circle -->
+              <circle class="donut-circle-bg" cx="110" cy="110" r="90"></circle>
+              <!-- 90% Liquidity Segment -->
+              <circle class="donut-segment segment-lp" cx="110" cy="110" r="90" title="90% Liquidity (Locked via Team Finance)"></circle>
+              <!-- 5% CEX & Marketing Segment -->
+              <circle class="donut-segment segment-cex" cx="110" cy="110" r="90" title="5% CEX Listings & Marketing"></circle>
+              <!-- 5% Airdrops & Rewards Segment -->
+              <circle class="donut-segment segment-airdrop" cx="110" cy="110" r="90" title="5% Airdrops & Community Rewards"></circle>
+            </svg>
+
+            <!-- Center Content -->
+            <div class="chart-center-content">
+              <span class="chart-crown-icon">👑</span>
+              <span class="chart-center-title">100%</span>
+              <span class="chart-center-sub">Auditable</span>
+            </div>
+          </div>
+
+          <!-- Interactive Legend -->
+          <div class="chart-legend">
+            <div class="legend-item">
+              <div class="legend-indicator">
+                <span class="legend-color-dot dot-lp"></span>
+                <span>Liquidity Pool (Locked Team Finance)</span>
+              </div>
+              <span class="legend-percent">90%</span>
+            </div>
+
+            <div class="legend-item">
+              <div class="legend-indicator">
+                <span class="legend-color-dot dot-cex"></span>
+                <span>CEX Listings &amp; Marketing</span>
+              </div>
+              <span class="legend-percent" style="color: var(--cyan-accent);">5%</span>
+            </div>
+
+            <div class="legend-item">
+              <div class="legend-indicator">
+                <span class="legend-color-dot dot-airdrop"></span>
+                <span>Airdrops &amp; Community Rewards</span>
+              </div>
+              <span class="legend-percent">5%</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5: ROADMAP (HORIZONTAL DESKTOP / VERTICAL MOBILE)
+       ========================================================================== -->
+  <section id="roadmap" class="section-padding">
+    <div class="container">
+      
+      <div class="section-header reveal">
+        <span class="section-tag">Strategic Horizons</span>
+        <h2 class="section-title">The Royal <span class="gold-gradient-text">Roadmap</span></h2>
+        <p class="section-subtitle">
+          Methodical, luxury-driven milestones guiding METANOIA to global ascension.
+        </p>
+      </div>
+
+      <div class="roadmap-container">
+        <div class="roadmap-grid">
+          
+          <!-- Phase 1: Awakening -->
+          <div class="art-deco-card phase-card reveal">
+            <span class="art-deco-corner corner-tl"></span>
+            <span class="art-deco-corner corner-tr"></span>
+            <span class="art-deco-corner corner-bl"></span>
+            <span class="art-deco-corner corner-br"></span>
+
+            <div class="phase-node">I</div>
+            <div class="phase-badge">Phase 01</div>
+            <h3 class="phase-title">Awakening</h3>
+            <ul class="phase-list">
+              <li>Token fair launch on BSC</li>
+              <li>Official website &amp; socials live</li>
+              <li>Community inception &amp; core FAM</li>
+              <li>Contract verified on BSCScan</li>
+            </ul>
+          </div>
+
+          <!-- Phase 2: Crown -->
+          <div class="art-deco-card phase-card reveal">
+            <span class="art-deco-corner corner-tl"></span>
+            <span class="art-deco-corner corner-tr"></span>
+            <span class="art-deco-corner corner-bl"></span>
+            <span class="art-deco-corner corner-br"></span>
+
+            <div class="phase-node">II</div>
+            <div class="phase-badge">Phase 02</div>
+            <h3 class="phase-title">Crown</h3>
+            <ul class="phase-list">
+              <li>Aggressive marketing &amp; luxury KOLs</li>
+              <li>CoinGecko &amp; CoinMarketCap fast-track</li>
+              <li>1,000+ verified holders</li>
+              <li>Strategic Web3 partnerships</li>
+            </ul>
+          </div>
+
+          <!-- Phase 3: Pride -->
+          <div class="art-deco-card phase-card reveal">
+            <span class="art-deco-corner corner-tl"></span>
+            <span class="art-deco-corner corner-tr"></span>
+            <span class="art-deco-corner corner-bl"></span>
+            <span class="art-deco-corner corner-br"></span>
+
+            <div class="phase-node">III</div>
+            <div class="phase-badge">Phase 03 (Mo. 2–4)</div>
+            <h3 class="phase-title">Pride</h3>
+            <ul class="phase-list">
+              <li>First Tier-2 CEX listing</li>
+              <li>NFT Drop: 333 Sovereign Queens</li>
+              <li>Royal Staking protocol launch</li>
+              <li>AI Raid bot deployment</li>
+              <li>Luxury merch partnership</li>
+              <li>5,000–7,000 holders target</li>
+            </ul>
+          </div>
+
+          <!-- Phase 4: Legacy -->
+          <div class="art-deco-card phase-card reveal">
+            <span class="art-deco-corner corner-tl"></span>
+            <span class="art-deco-corner corner-tr"></span>
+            <span class="art-deco-corner corner-bl"></span>
+            <span class="art-deco-corner corner-br"></span>
+
+            <div class="phase-node">IV</div>
+            <div class="phase-badge">Phase 04</div>
+            <h3 class="phase-title">Legacy</h3>
+            <ul class="phase-list">
+              <li>DAO governance &amp; treasury transition</li>
+              <li>Cross-chain liquidity bridge</li>
+              <li>Haute couture &amp; luxury collabs</li>
+              <li>Major Tier-1 exchange listings</li>
+              <li>Enduring multimedia legacy IP</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6: SECURITY (NO AUDITED BADGE)
+       ========================================================================== -->
+  <section id="security" class="section-padding" style="background: rgba(14, 14, 14, 0.4); border-top: 1px solid var(--border-gold); border-bottom: 1px solid var(--border-gold);">
+    <div class="container">
+      
+      <div class="section-header reveal">
+        <span class="section-tag">Integrity &amp; Trust</span>
+        <h2 class="section-title">Sovereign <span class="gold-gradient-text">Security</span></h2>
+        <p class="section-subtitle">
+          Protected by strict smart contract constraints, locked liquidity, and complete on-chain transparency.
+        </p>
+      </div>
+
+      <!-- Featured LP Locked Card at the Top -->
+      <div class="art-deco-card featured-lp-card reveal">
+        <span class="art-deco-corner corner-tl"></span>
+        <span class="art-deco-corner corner-tr"></span>
+        <span class="art-deco-corner corner-bl"></span>
+        <span class="art-deco-corner corner-br"></span>
+
+        <div class="featured-lp-layout">
+          <!-- Card Artwork: Panther Queen Guarding Gold Padlock -->
+          <div class="featured-lp-image-wrap">
+            <img src="assets/lp-locked.png" alt="METANOIA LP Locked — Black Panther Queen Guarding Gold Padlock" class="featured-lp-img" id="featured-lp-img" loading="lazy">
+          </div>
+
+          <!-- Card Content & Details -->
+          <div class="featured-lp-details">
+            <div class="featured-lp-badge-row">
+              <span class="section-tag" style="margin-bottom: 0;">✦ Primary Security Foundation ✦</span>
+              <span class="security-status" style="font-size: 0.75rem; padding: 4px 12px;">Team Finance Vault</span>
+            </div>
+
+            <div>
+              <h3 class="featured-lp-title gold-gradient-text">LP Locked</h3>
+              <p class="featured-lp-subtitle">Liquidity locked via Team Finance</p>
+            </div>
+
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.65;">
+              90% of the total 50 Trillion $METANOIA supply is secured inside Team Finance's cryptographic liquidity locker. Liquidity pool tokens cannot be withdrawn, ensuring uncompromised security and complete protection against rug-pulls.
+            </p>
+
+            <!-- Configurable Lock Expiry & Unlock Date Box -->
+            <div class="featured-lp-expiry-box">
+              <div>
+                <span class="featured-lp-expiry-label">Lock Duration</span>
+                <div class="featured-lp-expiry-val" id="featured-lp-duration">12 Months (Extendable / Renewable)</div>
+              </div>
+              <div>
+                <span class="featured-lp-expiry-label">Unlock Date</span>
+                <div class="featured-lp-expiry-val cyan-text" id="featured-lp-unlock">October 24, 2027</div>
+              </div>
+              <div>
+                <span class="featured-lp-expiry-label">Locked Allocation</span>
+                <div class="featured-lp-expiry-val" style="color: #4ade80;" id="featured-lp-percent">90% (45,000,000,000,000 $METANOIA)</div>
+              </div>
+            </div>
+
+            <!-- View Lock Proof Button -->
+            <div class="featured-lp-actions">
+              <a href="#" id="featured-lp-proof-btn" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="padding: 13px 28px;">
+                <span>View Lock Proof</span> &rarr;
+              </a>
+              <span style="font-size: 0.78rem; color: var(--text-muted);">
+                Verifiable on Team Finance &amp; BSCScan
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional 5 Security Pillars Grid -->
+      <div class="security-grid">
+
+        <!-- Card 1: Contract Verified -->
+        <div class="art-deco-card security-card reveal">
+          <div>
+            <div class="security-top">
+              <span class="security-icon">📜</span>
+              <span class="security-status">BSCScan</span>
+            </div>
+            <h3 class="security-name gold-gradient-text">Contract Verified</h3>
+            <p class="security-desc">
+              Full open-source code published and verified directly on BSCScan. Zero obfuscation and zero backdoors.
+            </p>
+          </div>
+          <a href="#" id="proof-contract" target="_blank" rel="noopener noreferrer" class="proof-link">
+            <span>View proof</span> &rarr;
+          </a>
+        </div>
+
+        <!-- Card 2: No Mint -->
+        <div class="art-deco-card security-card reveal">
+          <div>
+            <div class="security-top">
+              <span class="security-icon">🛡️</span>
+              <span class="security-status">Fixed Supply</span>
+            </div>
+            <h3 class="security-name gold-gradient-text">No Mint</h3>
+            <p class="security-desc">
+              There is no minting function in the code. The 50 Trillion total supply can never be inflated or diluted.
+            </p>
+          </div>
+          <a href="#" id="proof-nomint" target="_blank" rel="noopener noreferrer" class="proof-link">
+            <span>View proof</span> &rarr;
+          </a>
+        </div>
+
+        <!-- Card 3: No Honeypot -->
+        <div class="art-deco-card security-card reveal">
+          <div>
+            <div class="security-top">
+              <span class="security-icon">⚡</span>
+              <span class="security-status">0% / 0% Tax</span>
+            </div>
+            <h3 class="security-name gold-gradient-text">No Honeypot</h3>
+            <p class="security-desc">
+              Unrestricted transferability. Clean standard BEP-20 logic with zero tax manipulation and no blacklists.
+            </p>
+          </div>
+          <a href="#" id="proof-honeypot" target="_blank" rel="noopener noreferrer" class="proof-link">
+            <span>View proof</span> &rarr;
+          </a>
+        </div>
+
+        <!-- Card 4: Multi-sig Treasury -->
+        <div class="art-deco-card security-card reveal">
+          <div>
+            <div class="security-top">
+              <span class="security-icon">🏛️</span>
+              <span class="security-status">Multi-Sig</span>
+            </div>
+            <h3 class="security-name gold-gradient-text">Multi-sig Treasury</h3>
+            <p class="security-desc">
+              Ecosystem reserve funds for marketing and future CEX listings require multiple key signers for any transaction.
+            </p>
+          </div>
+          <a href="#" id="proof-multisig" target="_blank" rel="noopener noreferrer" class="proof-link">
+            <span>View proof</span> &rarr;
+          </a>
+        </div>
+
+        <!-- Card 5: Ownership Renounced -->
+        <div class="art-deco-card security-card reveal">
+          <div>
+            <div class="security-top">
+              <span class="security-icon">👑</span>
+              <span class="security-status">Immutable</span>
+            </div>
+            <h3 class="security-name gold-gradient-text">Ownership Renounced</h3>
+            <p class="security-desc">
+              Smart contract parameters are permanently locked. No single party can alter fees, pause trading, or tamper with rules.
+            </p>
+          </div>
+          <a href="#" id="proof-renounced" target="_blank" rel="noopener noreferrer" class="proof-link">
+            <span>View proof</span> &rarr;
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 7: HOW TO BUY
+       ========================================================================== -->
+  <section id="how-to-buy" class="section-padding">
+    <div class="container">
+      
+      <div class="section-header reveal">
+        <span class="section-tag">Acquisition Guide</span>
+        <h2 class="section-title">How to Claim Your <span class="gold-gradient-text">Crown</span></h2>
+        <p class="section-subtitle">
+          Acquiring $METANOIA takes just four simple steps on Binance Smart Chain.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        
+        <!-- Step 1 -->
+        <div class="art-deco-card step-card reveal">
+          <span class="art-deco-corner corner-tl"></span>
+          <span class="art-deco-corner corner-tr"></span>
+          <span class="art-deco-corner corner-bl"></span>
+          <span class="art-deco-corner corner-br"></span>
+
+          <span class="step-num">01</span>
+          <h3 class="step-title gold-gradient-text">Set Up a Wallet</h3>
+          <p class="step-desc">
+            Download a Web3 wallet such as MetaMask, Trust Wallet, or Rabby. Ensure your network is set to <strong>BNB Smart Chain (BSC)</strong>.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="art-deco-card step-card reveal">
+          <span class="art-deco-corner corner-tl"></span>
+          <span class="art-deco-corner corner-tr"></span>
+          <span class="art-deco-corner corner-bl"></span>
+          <span class="art-deco-corner corner-br"></span>
+
+          <span class="step-num">02</span>
+          <h3 class="step-title gold-gradient-text">Fund with BNB</h3>
+          <p class="step-desc">
+            Purchase BNB on an exchange (Binance, Bybit, Coinbase) and transfer it directly to your BEP-20 wallet address to cover token purchase and network gas.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="art-deco-card step-card reveal">
+          <span class="art-deco-corner corner-tl"></span>
+          <span class="art-deco-corner corner-tr"></span>
+          <span class="art-deco-corner corner-bl"></span>
+          <span class="art-deco-corner corner-br"></span>
+
+          <span class="step-num">03</span>
+          <h3 class="step-title gold-gradient-text">Connect PancakeSwap</h3>
+          <p class="step-desc">
+            Navigate to PancakeSwap V3, connect your wallet, and paste the official $METANOIA verified contract address:
+            <code style="display:block; margin-top:8px; font-size:0.75rem; color:var(--cyan-accent); word-break:break-all;">0xA4555A9f6bEf7F42FB341504722163a2ee180F0d</code>
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="art-deco-card step-card reveal">
+          <span class="art-deco-corner corner-tl"></span>
+          <span class="art-deco-corner corner-tr"></span>
+          <span class="art-deco-corner corner-bl"></span>
+          <span class="art-deco-corner corner-br"></span>
+
+          <span class="step-num">04</span>
+          <h3 class="step-title gold-gradient-text">Swap for $METANOIA</h3>
+          <p class="step-desc">
+            Select the amount of BNB you wish to trade. With <strong>0% buy tax</strong>, standard 0.5% slippage is recommended. Confirm the swap and welcome to the Pride!
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 8: COMMUNITY
+       ========================================================================== -->
+  <section id="community" class="section-padding">
+    <div class="container">
+      
+      <div class="art-deco-card community-banner reveal">
+        <span class="art-deco-corner corner-tl"></span>
+        <span class="art-deco-corner corner-tr"></span>
+        <span class="art-deco-corner corner-bl"></span>
+        <span class="art-deco-corner corner-br"></span>
+
+        <span class="community-badge">✦ Sovereign Collective ✦</span>
+        <h2 class="community-title gold-gradient-text">
+          "Early holders = family."
+        </h2>
+        <p class="community-tagline">
+          Join our prestigious council of creators, traders, and feline royalty. Participate in strategic discussions, community raids, and governance.
+        </p>
+
+        <!-- Social Buttons -->
+        <div class="social-btn-group">
+          <a href="#" id="social-x" target="_blank" rel="noopener noreferrer" class="social-btn">
+            <span>𝕏 (Twitter)</span> &rarr;
+          </a>
+          <a href="#" id="social-tg" target="_blank" rel="noopener noreferrer" class="social-btn cyan-btn">
+            <span>Telegram Pride</span> &rarr;
+          </a>
+          <a href="#" id="social-dex" target="_blank" rel="noopener noreferrer" class="social-btn">
+            <span>DexScreener Chart</span> &rarr;
+          </a>
+          <a href="#" id="social-bsc" target="_blank" rel="noopener noreferrer" class="social-btn">
+            <span>BSCScan Explorer</span> &rarr;
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 9: FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <!-- Brand Info -->
+        <div>
+          <a href="#" class="brand">
+            <img src="assets/logo.png" alt="METANOIA Logo" class="brand-logo" id="footer-logo" loading="lazy">
+            <div class="brand-text-wrap">
+              <span class="brand-title gold-gradient-text">METANOIA</span>
+              <span class="brand-sub">WHERE AI MEETS FELINE ROYALTY</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc">
+            The first female luxury feline AI token on BNB Smart Chain. Sovereign intelligence, high-society culture, and decentralized empowerment.
+          </p>
+
+          <div class="footer-ca-mini">
+            <span>0xA4555A9f...0F0d</span>
+            <button class="footer-ca-copy" id="footer-copy-btn">Copy</button>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-col-title font-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#about" class="footer-link">About the Queen</a></li>
+            <li><a href="#tokenomics" class="footer-link">Tokenomics</a></li>
+            <li><a href="#roadmap" class="footer-link">Roadmap &amp; Milestones</a></li>
+            <li><a href="#security" class="footer-link">Security &amp; Proofs</a></li>
+            <li><a href="#how-to-buy" class="footer-link">How to Buy</a></li>
+            <li><a href="#community" class="footer-link">Join Community</a></li>
+          </ul>
+        </div>
+
+        <!-- Exchange & Tracking -->
+        <div>
+          <h4 class="footer-col-title font-heading">Exchanges &amp; Proofs</h4>
+          <ul class="footer-links">
+            <li><a href="#" id="footer-link-pancake" target="_blank" rel="noopener noreferrer" class="footer-link">PancakeSwap V3</a></li>
+            <li><a href="#" id="footer-link-chart" target="_blank" rel="noopener noreferrer" class="footer-link">DexScreener Live</a></li>
+            <li><a href="#" id="footer-link-bsc" target="_blank" rel="noopener noreferrer" class="footer-link">BSCScan Contract</a></li>
+            <li><a href="#" id="footer-link-teamfinance" target="_blank" rel="noopener noreferrer" class="footer-link">Team Finance LP Lock</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Legal Disclaimer Box -->
+      <div class="footer-disclaimer-box">
+        <p class="footer-disclaimer-text">
+          <strong>Disclaimer:</strong> $METANOIA is a community meme token with no intrinsic value or expectation of financial return. Not financial advice. Crypto is high risk. Do your own research.
+        </p>
+
+        <div class="footer-bottom-row">
+          <span>&copy; <span id="current-year">2026</span> METANOIA ($METANOIA). All Rights Reserved.</span>
+          <span>#NotJustACat &bull; #QUEEN &bull; BNB Smart Chain</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       VANILLA JAVASCRIPT & CONFIG OBJECT
+       Ready to deploy on Vercel or Netlify without frameworks.
+       ========================================================================== -->
+  <script>
+    /**
+     * ========================================================================
+     * METANOIA CENTRAL CONFIGURATION OBJECT
+     * Edit your contract address, links, proof URLs, and social links here.
+     * Everything on the page updates automatically from this single block.
+     * ========================================================================
+     */
+    const CONFIG = {
+      // Token Contract Details
+      tokenName: "METANOIA",
+      tokenTicker: "$METANOIA",
+      contractAddress: "0xA4555A9f6bEf7F42FB341504722163a2ee180F0d",
+
+      // Trading & Chart Links
+      buyUrl: "https://pancakeswap.finance/swap?outputCurrency=0xA4555A9f6bEf7F42FB341504722163a2ee180F0d",
+      chartUrl: "https://dexscreener.com/bsc/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d",
+
+      // Social Channels
+      socials: {
+        x: "https://x.com/MetanoiaQueen",
+        telegram: "https://t.me/MetanoiaQueen",
+        dexscreener: "https://dexscreener.com/bsc/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d",
+        bscscan: "https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d"
+      },
+
+      // Security & LP Lock Details (Editable)
+      security: {
+        lpLockDurationText: "12 Months (Extendable / Renewable)",
+        lpUnlockDateText: "October 24, 2027",
+        lpLockedPercentText: "90% (45,000,000,000,000 $METANOIA)",
+        lockExpiryDate: "2027-10-24" // ISO format date for reference
+      },
+
+      // Security Verification Proof Links
+      proofs: {
+        lpLocked: "https://www.team.finance/view-coin/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d",
+        contractVerified: "https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d#code",
+        noMint: "https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d#readContract",
+        noHoneypot: "https://bscscan.com/token/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d",
+        multiSig: "https://bscscan.com/address/0xA4555A9f6bEf7F42FB341504722163a2ee180F0d",
+        ownershipRenounced: "https://bscscan.com/tx/0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+
+      // Mascot & Security Image Paths (Slot to replace with your custom assets)
+      images: {
+        hero: "assets/hero.png",
+        logo: "assets/logo.png",
+        lpLocked: "assets/lp-locked.png"
+      }
+    };
+
+    // ========================================================================
+    // DOM POPULATION & CONFIG BINDINGS
+    // ========================================================================
+    document.addEventListener("DOMContentLoaded", function () {
+      
+      // Update Contract Address displays
+      const heroCaText = document.getElementById("hero-ca-text");
+      if (heroCaText) heroCaText.textContent = CONFIG.contractAddress;
+
+      // Update Buy & Chart Buttons
+      const navBuyBtn = document.getElementById("nav-buy-btn");
+      if (navBuyBtn) navBuyBtn.href = CONFIG.buyUrl;
+
+      const mobileBuyBtn = document.getElementById("mobile-buy-btn");
+      if (mobileBuyBtn) mobileBuyBtn.href = CONFIG.buyUrl;
+
+      const heroBuyBtn = document.getElementById("hero-buy-btn");
+      if (heroBuyBtn) heroBuyBtn.href = CONFIG.buyUrl;
+
+      const mobileChartBtn = document.getElementById("mobile-chart-btn");
+      if (mobileChartBtn) mobileChartBtn.href = CONFIG.chartUrl;
+
+      const heroChartBtn = document.getElementById("hero-chart-btn");
+      if (heroChartBtn) heroChartBtn.href = CONFIG.chartUrl;
+
+      // Update Featured LP Locked Card Details
+      const featuredLpImg = document.getElementById("featured-lp-img");
+      if (featuredLpImg && CONFIG.images && CONFIG.images.lpLocked) {
+        featuredLpImg.src = CONFIG.images.lpLocked;
+      }
+
+      const featuredLpProofBtn = document.getElementById("featured-lp-proof-btn");
+      if (featuredLpProofBtn) featuredLpProofBtn.href = CONFIG.proofs.lpLocked;
+
+      const featuredLpDuration = document.getElementById("featured-lp-duration");
+      if (featuredLpDuration && CONFIG.security && CONFIG.security.lpLockDurationText) {
+        featuredLpDuration.textContent = CONFIG.security.lpLockDurationText;
+      }
+
+      const featuredLpUnlock = document.getElementById("featured-lp-unlock");
+      if (featuredLpUnlock && CONFIG.security && CONFIG.security.lpUnlockDateText) {
+        featuredLpUnlock.textContent = CONFIG.security.lpUnlockDateText;
+      }
+
+      const featuredLpPercent = document.getElementById("featured-lp-percent");
+      if (featuredLpPercent && CONFIG.security && CONFIG.security.lpLockedPercentText) {
+        featuredLpPercent.textContent = CONFIG.security.lpLockedPercentText;
+      }
+
+      // Update Proof Links in Security Section
+      const proofContract = document.getElementById("proof-contract");
+      if (proofContract) proofContract.href = CONFIG.proofs.contractVerified;
+
+      const proofNoMint = document.getElementById("proof-nomint");
+      if (proofNoMint) proofNoMint.href = CONFIG.proofs.noMint;
+
+      const proofHoneypot = document.getElementById("proof-honeypot");
+      if (proofHoneypot) proofHoneypot.href = CONFIG.proofs.noHoneypot;
+
+      const proofMultiSig = document.getElementById("proof-multisig");
+      if (proofMultiSig) proofMultiSig.href = CONFIG.proofs.multiSig;
+
+      const proofRenounced = document.getElementById("proof-renounced");
+      if (proofRenounced) proofRenounced.href = CONFIG.proofs.ownershipRenounced;
+
+      // Update Social Buttons
+      const socialX = document.getElementById("social-x");
+      if (socialX) socialX.href = CONFIG.socials.x;
+
+      const socialTg = document.getElementById("social-tg");
+      if (socialTg) socialTg.href = CONFIG.socials.telegram;
+
+      const socialDex = document.getElementById("social-dex");
+      if (socialDex) socialDex.href = CONFIG.socials.dexscreener;
+
+      const socialBsc = document.getElementById("social-bsc");
+      if (socialBsc) socialBsc.href = CONFIG.socials.bscscan;
+
+      // Update Footer Links
+      const footerPancake = document.getElementById("footer-link-pancake");
+      if (footerPancake) footerPancake.href = CONFIG.buyUrl;
+
+      const footerChart = document.getElementById("footer-link-chart");
+      if (footerChart) footerChart.href = CONFIG.chartUrl;
+
+      const footerBsc = document.getElementById("footer-link-bsc");
+      if (footerBsc) footerBsc.href = CONFIG.socials.bscscan;
+
+      const footerTeam = document.getElementById("footer-link-teamfinance");
+      if (footerTeam) footerTeam.href = CONFIG.proofs.lpLocked;
+
+      // Set Copyright Year
+      const yearEl = document.getElementById("current-year");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // Setup Copy-to-Clipboard Functionality
+      setupCopyHandlers();
+
+      // Setup Mobile Navigation Menu
+      setupMobileNavigation();
+
+      // Setup Scroll Reveal Animations
+      setupScrollReveal();
+
+      // Initialize Gold Particles Canvas
+      initGoldParticles();
+    });
+
+    // ========================================================================
+    // COPY TO CLIPBOARD HANDLERS
+    // ========================================================================
+    function setupCopyHandlers() {
+      const heroBtn = document.getElementById("hero-copy-btn");
+      const heroLabel = document.getElementById("hero-copy-label");
+
+      if (heroBtn && heroLabel) {
+        heroBtn.addEventListener("click", function () {
+          copyAddressToClipboard(CONFIG.contractAddress, function () {
+            heroBtn.classList.add("copied");
+            heroLabel.textContent = "Copied!";
+            setTimeout(function () {
+              heroBtn.classList.remove("copied");
+              heroLabel.textContent = "Copy CA";
+            }, 2500);
+          });
+        });
+      }
+
+      const footerBtn = document.getElementById("footer-copy-btn");
+      if (footerBtn) {
+        footerBtn.addEventListener("click", function () {
+          copyAddressToClipboard(CONFIG.contractAddress, function () {
+            footerBtn.textContent = "Copied!";
+            setTimeout(function () {
+              footerBtn.textContent = "Copy";
+            }, 2000);
+          });
+        });
+      }
+    }
+
+    function copyAddressToClipboard(text, onSuccess) {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(onSuccess).catch(function () {
+          fallbackCopyText(text, onSuccess);
+        });
+      } else {
+        fallbackCopyText(text, onSuccess);
+      }
+    }
+
+    function fallbackCopyText(text, onSuccess) {
+      const tempInput = document.createElement("input");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand("copy");
+        if (onSuccess) onSuccess();
+      } catch (err) {
+        console.error("Copy failed", err);
+      }
+      document.body.removeChild(tempInput);
+    }
+
+    // ========================================================================
+    // MOBILE NAVIGATION DRAWER
+    // ========================================================================
+    function setupMobileNavigation() {
+      const btn = document.getElementById("hamburger-btn");
+      const drawer = document.getElementById("mobile-menu-drawer");
+
+      if (!btn || !drawer) return;
+
+      btn.addEventListener("click", function () {
+        const isOpen = drawer.classList.contains("open");
+        if (isOpen) {
+          drawer.classList.remove("open");
+          btn.classList.remove("active");
+          btn.setAttribute("aria-expanded", "false");
+          document.body.style.overflow = "";
+        } else {
+          drawer.classList.add("open");
+          btn.classList.add("active");
+          btn.setAttribute("aria-expanded", "true");
+          document.body.style.overflow = "hidden";
+        }
+      });
+
+      // Close drawer when any anchor link is clicked
+      const links = drawer.querySelectorAll("[data-close-drawer]");
+      links.forEach(function (link) {
+        link.addEventListener("click", function () {
+          drawer.classList.remove("open");
+          btn.classList.remove("active");
+          btn.setAttribute("aria-expanded", "false");
+          document.body.style.overflow = "";
+        });
+      });
+    }
+
+    // ========================================================================
+    // SMOOTH SCROLL REVEAL (INTERSECTION OBSERVER)
+    // ========================================================================
+    function setupScrollReveal() {
+      const reveals = document.querySelectorAll(".reveal");
+      if (!window.IntersectionObserver) {
+        reveals.forEach(function (el) { el.classList.add("revealed"); });
+        return;
+      }
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: "0px 0px -40px 0px"
+      });
+
+      reveals.forEach(function (el) {
+        observer.observe(el);
+      });
+    }
+
+    // ========================================================================
+    // SUBTLE GOLD SHIMMER / PARTICLES CANVAS ANIMATION
+    // ========================================================================
+    function initGoldParticles() {
+      const canvas = document.getElementById("gold-particles");
+      if (!canvas) return;
+
+      // Respect prefers-reduced-motion
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        canvas.style.display = "none";
+        return;
+      }
+
+      const ctx = canvas.getContext("2d");
+      let width = canvas.width = window.innerWidth;
+      let height = canvas.height = window.innerHeight;
+
+      window.addEventListener("resize", function () {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      const particleCount = Math.min(width > 768 ? 42 : 22, 50);
+      const particles = [];
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          size: Math.random() * 2 + 0.7,
+          speedY: Math.random() * 0.45 + 0.15,
+          speedX: (Math.random() - 0.5) * 0.25,
+          opacity: Math.random() * 0.5 + 0.25,
+          isCyan: Math.random() > 0.85 // small chance of AI cyan shimmer
+        });
+      }
+
+      function render() {
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          p.y -= p.speedY;
+          p.x += p.speedX;
+
+          if (p.y < 0) {
+            p.y = height + 10;
+            p.x = Math.random() * width;
+          }
+          if (p.x < 0) p.x = width;
+          if (p.x > width) p.x = 0;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          if (p.isCyan) {
+            ctx.fillStyle = "rgba(45, 212, 212, " + p.opacity + ")";
+          } else {
+            ctx.fillStyle = "rgba(212, 175, 55, " + p.opacity + ")";
+          }
+          ctx.fill();
+        }
+
+        requestAnimationFrame(render);
+      }
+
+      render();
+    }
+  </script>
+</body>
+</html>
