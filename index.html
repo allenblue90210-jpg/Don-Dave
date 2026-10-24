@@ -1290,10 +1290,10 @@
 
     .security-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 24px;
     }
-    @media (max-width: 991px) {
+    @media (max-width: 1024px) {
       .security-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -2149,25 +2149,66 @@
         </div>
       </div>
 
-      <!-- Additional 5 Security Pillars Grid -->
-      <div class="security-grid">
+      <!-- Featured Contract Verified Card (Matching Size to LP Locked) -->
+      <div class="art-deco-card featured-lp-card reveal">
+        <span class="art-deco-corner corner-tl"></span>
+        <span class="art-deco-corner corner-tr"></span>
+        <span class="art-deco-corner corner-bl"></span>
+        <span class="art-deco-corner corner-br"></span>
 
-        <!-- Card 1: Contract Verified -->
-        <div class="art-deco-card security-card reveal">
-          <div>
-            <div class="security-top">
-              <span class="security-icon">📜</span>
-              <span class="security-status">BSCScan</span>
-            </div>
-            <h3 class="security-name gold-gradient-text">Contract Verified</h3>
-            <p class="security-desc">
-              Full open-source code published and verified directly on BSCScan. Zero obfuscation and zero backdoors.
-            </p>
+        <div class="featured-lp-layout">
+          <!-- Card Artwork: Queen Holding Ancient Greek Scroll with Verified Seal -->
+          <div class="featured-lp-image-wrap">
+            <img src="assets/contract-verified.png" alt="METANOIA Contract Verified — Black Panther Queen Holding Ancient Greek Scroll" class="featured-lp-img" id="featured-contract-img" loading="lazy">
           </div>
-          <a href="#" id="proof-contract" target="_blank" rel="noopener noreferrer" class="proof-link">
-            <span>View proof</span> &rarr;
-          </a>
+
+          <!-- Card Content & Details -->
+          <div class="featured-lp-details">
+            <div class="featured-lp-badge-row">
+              <span class="section-tag" style="margin-bottom: 0;">✦ Smart Contract Transparency ✦</span>
+              <span class="security-status" style="font-size: 0.75rem; padding: 4px 12px;">BSCScan Verified</span>
+            </div>
+
+            <div>
+              <h3 class="featured-lp-title gold-gradient-text">Contract Verified</h3>
+              <p class="featured-lp-subtitle">Contract verified on BSCScan</p>
+            </div>
+
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.65;">
+              The complete $METANOIA smart contract source code is openly published, verified, and publicly inspectable on BSCScan. The code is pure standard BEP-20 with immutable mathematical logic: no hidden minting functions, no proxy upgrades, and zero tax manipulation.
+            </p>
+
+            <!-- Verification Metadata Box -->
+            <div class="featured-lp-expiry-box">
+              <div>
+                <span class="featured-lp-expiry-label">Compiler Version</span>
+                <div class="featured-lp-expiry-val">Solidity v0.8.20+</div>
+              </div>
+              <div>
+                <span class="featured-lp-expiry-label">Verification Status</span>
+                <div class="featured-lp-expiry-val cyan-text">BSCScan Exact Match</div>
+              </div>
+              <div>
+                <span class="featured-lp-expiry-label">Contract Standard</span>
+                <div class="featured-lp-expiry-val" style="color: #4ade80;">BEP-20 (BNB Smart Chain)</div>
+              </div>
+            </div>
+
+            <!-- View on BSCScan Button -->
+            <div class="featured-lp-actions">
+              <a href="#" id="featured-contract-proof-btn" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="padding: 13px 28px;">
+                <span>View on BSCScan</span> &rarr;
+              </a>
+              <span style="font-size: 0.78rem; color: var(--text-muted);">
+                Contract: 0xA4555A9f...0F0d
+              </span>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Additional 4 Security Pillars Grid -->
+      <div class="security-grid">
 
         <!-- Card 2: No Mint -->
         <div class="art-deco-card security-card reveal">
@@ -2480,7 +2521,8 @@
       images: {
         hero: "assets/hero.png",
         logo: "assets/logo.png",
-        lpLocked: "assets/lp-locked.png"
+        lpLocked: "assets/lp-locked.png",
+        contractVerified: "assets/contract-verified.png"
       }
     };
 
@@ -2533,9 +2575,14 @@
         featuredLpPercent.textContent = CONFIG.security.lpLockedPercentText;
       }
 
-      // Update Proof Links in Security Section
-      const proofContract = document.getElementById("proof-contract");
-      if (proofContract) proofContract.href = CONFIG.proofs.contractVerified;
+      // Update Featured Contract Verified Card Details
+      const featuredContractImg = document.getElementById("featured-contract-img");
+      if (featuredContractImg && CONFIG.images && CONFIG.images.contractVerified) {
+        featuredContractImg.src = CONFIG.images.contractVerified;
+      }
+
+      const featuredContractProofBtn = document.getElementById("featured-contract-proof-btn");
+      if (featuredContractProofBtn) featuredContractProofBtn.href = CONFIG.proofs.contractVerified;
 
       const proofNoMint = document.getElementById("proof-nomint");
       if (proofNoMint) proofNoMint.href = CONFIG.proofs.noMint;
